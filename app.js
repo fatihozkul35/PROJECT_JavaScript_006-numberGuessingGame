@@ -44,6 +44,9 @@ function compareFunction() {
     result.style.backgroundColor = "green";
     atkafasiIBO = 1;
   }
+  if (i == 0) {
+    result.firstElementChild.innerHTML = `game over...`;
+  }
 }
 
 // function restartGame() {
