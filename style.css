@@ -1,0 +1,30 @@
+/* !   MAİN */
+
+.container-fluid {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 40%;
+}
+.display {
+  width: 50vw;
+  height: 10vh;
+  background-color: red;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .display {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .display {
+    font-size: 1.2rem;
+  }
+}
