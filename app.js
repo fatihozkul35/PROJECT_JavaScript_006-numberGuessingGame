@@ -6,7 +6,7 @@ const buttonTest = document.querySelector(".testButton");
 const numIkeep = randomNumber();
 // const result = document.querySelector(".help");
 let i = 5; // 5 attempts are allowed
-
+let atkafasiIBO = 0;
 function randomNumber() {
   return Math.floor(Math.random() * 51);
 }
@@ -22,22 +22,30 @@ button.addEventListener("click", compareFunction);
 function compareFunction() {
   const num = document.querySelector(".form-control").value;
   const result = document.querySelector(".display");
-  if (i == 0) {
-    result.firstElementChild.innerHTML = `Game over...`;
-    return;
+  if (true) {
+    if (atkafasiIBO == 1) {
+      return;
+    } else if (i == 0) {
+      return;
+    }
+    // result.firstElementChild.innerHTML = `Game over...`;
   }
-  i--;
   if (num > numIkeep) {
+    i--;
     result.firstElementChild.innerHTML = `reduce your number, you have ${i} left`;
   } else if (num < numIkeep) {
+    i--;
     result.firstElementChild.innerHTML = `increase your number, you have ${i} left`;
-  } else {
+  } else if (num == numIkeep) {
+    i--;
     result.firstElementChild.innerHTML = `congratulations, you got it in ${
       5 - i
     } tries...`;
     result.style.backgroundColor = "green";
+    atkafasiIBO = 1;
   }
 }
+
 // function restartGame() {
 //   setTimeout(2000);
 //   const gameOver = document.createElement("div");
