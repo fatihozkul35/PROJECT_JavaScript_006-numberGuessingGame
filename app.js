@@ -45,7 +45,7 @@ function compareFunction() {
     atkafasiIBO = 1;
   }
   if (i == 0) {
-    result.firstElementChild.innerHTML = `game over...`;
+    result.firstElementChild.innerHTML = `game over...The number I keep was ${numIkeep}`;
   }
 }
 
