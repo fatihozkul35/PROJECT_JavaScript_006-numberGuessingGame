@@ -44,7 +44,7 @@ function compareFunction() {
     result.style.backgroundColor = "green";
     atkafasiIBO = 1;
   }
-  if (i == 0) {
+  if (i == 0 && !(atkafasiIBO = 1)) {
     result.firstElementChild.innerHTML = `game over...The number I keep was ${numIkeep}`;
   }
 }
